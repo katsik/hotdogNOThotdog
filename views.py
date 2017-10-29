@@ -20,8 +20,7 @@ def espa():
 
 
 def hotdogqualifier(arg):
-    print arg['images'][0]
-    print arg['images'][0]['classifiers'][0]
+    
     for item in arg['images'][0]['classifiers'][0]['classes']:
         if item['class'] == 'hotdog' and item['score']>0.5:
             return "HOT DOG"
