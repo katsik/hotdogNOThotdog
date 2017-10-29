@@ -11,7 +11,7 @@ def espa():
     elif request.method == 'POST':
         img_url = request.form['url']
         
-        url2post= 'https://gateway-a.watsonplatform.net/visual-recognition/api/v3/classify?api_key=50ebcce38d2bf9a1975933a6227729aad35526fe&version=2016-05-20&url=%s' %img_url
+        url2post= 'https://gateway-a.watsonplatform.net/visual-recognition/api/v3/classify?api_key={YOUR-API-KEY}&version=2016-05-20&url=%s' %img_url
 
         poster = h.Http()
         response, content = poster.request(url2post,method="POST")
